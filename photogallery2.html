@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Photo Gallery</title>
+    <style>
+        h1 {
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            color: white; /* Corrected here */
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
+        }
+
+        /* Animation for gallery items */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-item {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .gallery-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        .gallery-item:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SPORTS </h1>
+    <div class="gallery">
+        < div class="gallery-item"><img src="https://source.unsplash.com/200x200/?soccer" alt="Soccer"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?basketball" alt="Basketball"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?tennis" alt="Tennis"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?cricket" alt="Cricket"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?rugby" alt="Rugby"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?baseball" alt="Baseball"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?golf" alt="Golf"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?swimming" alt="Swimming"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?cycling" alt="Cycling"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?boxing" alt="Boxing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?wrestling" alt="Wrestling"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?badminton" alt="Badminton"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?hockey" alt="Hockey"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?volleyball" alt="Volleyball"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?table-tennis" alt="Table Tennis"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?karate" alt="Karate"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?skiing" alt="Skiing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?snowboarding" alt="Snowboarding"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?skateboarding" alt="Skateboarding"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?surfing" alt="Surfing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?horse-riding" alt="Horse Riding"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?archery" alt="Archery"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?fencing" alt="Fencing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?gymnastics" alt="Gymnastics"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?weightlifting" alt="Weightlifting"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?rowing" alt="Rowing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?triathlon" alt="Triathlon"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?climbing" alt="Climbing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?motorsports" alt="Motorsports"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?diving" alt="Diving"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?marathon" alt="Marathon"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?judo" alt="Judo"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?taekwondo" alt="Taekwondo"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?parkour" alt="Parkour"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?lacrosse" alt="Lacrosse"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?squash" alt="Squash"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?handball" alt="Handball"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?water-polo" alt="Water Polo"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?canoeing" alt="Canoeing"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?polo" alt="Polo"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?bobsleigh" alt="Bobsleigh"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?speed-skating" alt="Speed Skating"></div>
+        <div class="gallery-item"><img src="https://source.unsplash.com/200x200/?figure-skating" alt="Figure Skating"></div>
+
+
+    </div>
+           
+    
+</body>
+
+</html>
